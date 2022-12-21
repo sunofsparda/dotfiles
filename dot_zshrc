@@ -21,4 +21,7 @@ znap eval ssh-agent 'ssh-agent'
 znap function _pyenv pyenv 'eval "$( pyenv init - --no-rehash )"'
 compctl -K    _pyenv pyenv
 
+export PATH=~/bin:/opt/bin:$PATH
+
 ssh-add ~/.ssh/$(ls ~/.ssh | sort | grep -v '.pub')
+
